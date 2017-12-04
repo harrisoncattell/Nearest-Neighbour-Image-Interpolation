@@ -3,6 +3,11 @@ function [image] =  nn_int(r_image, scale_factor)
 % ------- Nearest-Neighbour Interpolation Function -------
 % Created by Harrison Cattell, 2017
 %
+% IMPORTANT NOTICE
+% -----------
+%
+%   Images MUST be in greyscale before calling this function
+%
 % Description
 % -----------
 %   Self-made implementation of the nearest-neighbour 
@@ -18,10 +23,6 @@ function [image] =  nn_int(r_image, scale_factor)
 
 % -------------------------------------------------------------------------
 %
-%
-% Convert image from colour to grayscale
-gray_image = rgb2gray(r_image);
-
 % Initalise matrix dimensions
 [col, row] = size(gray_image);
 
